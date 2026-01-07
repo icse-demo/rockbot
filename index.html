@@ -331,7 +331,7 @@ nz-card[_ngcontent-ng-c459825792] .ant-card-body nz-input-group{
     align-items:center
 }
 .unruly-new-design-wrapper[_ngcontent-ng-c459825792] {
-  background-image: url('https://media.licdn.com/dms/image/v2/D4E0BAQHvz_UqyXvPUg/company-logo_200_200/B4EZnfXchbHEAI-/0/1760389089691/rainxyz_logo?e=2147483647&v=beta&t=7l45dli4YRZWZPxE7Sh1Hf32r8XKYxc6kLCR0fX9fU0') !important;
+  background-image: url('https://cdn.sanity.io/images/6h2uzio7/production/5511b1bc8b4f75d65d904192cf36462c31f796ef-880x500.jpg?auto=format&w=380') !important;
 }
   </style>
    </head>
@@ -628,6 +628,7 @@ function handleCWMessage(message) {
           },
           workflowTemplateId: WORKFLOW_TEMPLATE_ID
       });
+      document.getElementById('sign-in-card').style.display = "block"; 
       break;
     case 'clickwrap_is_loading':
       // data has been set, clickwrap is loading within iframe
