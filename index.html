@@ -577,7 +577,8 @@ selectElement.addEventListener('change', function() {
       sendIframeMessage({
           type: 'set_data',
           data: {
-              formValues: { products: [{ columnQuantity: 1, columnName: 'Product 1', columnPrice: { amount: 1000, currency: 'USD' } }], },
+              //formValues: { products: [{ columnQuantity: 1, columnName: 'Product 1', columnPrice: { amount: 1000, currency: 'USD' } }], },
+              formValues: {},
               styles: CLICKWRAP_STYLES,
           },
           workflowTemplateId: WORKFLOW_TEMPLATE_ID
@@ -623,7 +624,8 @@ function handleCWMessage(message) {
       sendIframeMessage({
           type: 'set_data',
           data: {
-              formValues: { products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }], },
+              //formValues: { products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }], },
+              formValues: {},
               styles: CLICKWRAP_STYLES,
           },
           workflowTemplateId: WORKFLOW_TEMPLATE_ID
@@ -811,7 +813,7 @@ function displayClickwrap() {
             counterpartyName: EMAIL_ADDRESS,
             counterpartySignerName: EMAIL_ADDRESS,
             counterpartySignerEmail: EMAIL_ADDRESS,
-            products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }],
+            //products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }],
           },
           styles: CLICKWRAP_STYLES,
       },
