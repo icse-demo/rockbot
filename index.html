@@ -577,7 +577,7 @@ selectElement.addEventListener('change', function() {
       sendIframeMessage({
           type: 'set_data',
           data: {
-              formValues: { products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }], },
+              formValues: { products: [{ columnQuantity: 1, columnName: 'Product 1', columnPrice: { amount: 1000, currency: 'USD' } }], },
               styles: CLICKWRAP_STYLES,
           },
           workflowTemplateId: WORKFLOW_TEMPLATE_ID
