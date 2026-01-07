@@ -577,7 +577,7 @@ selectElement.addEventListener('change', function() {
       sendIframeMessage({
           type: 'set_data',
           data: {
-              formValues: DATA_VENDOR ? { dataVendor: DATA_VENDOR } : {},
+              formValues: { products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }], },
               styles: CLICKWRAP_STYLES,
           },
           workflowTemplateId: WORKFLOW_TEMPLATE_ID
@@ -623,7 +623,7 @@ function handleCWMessage(message) {
       sendIframeMessage({
           type: 'set_data',
           data: {
-              formValues: DATA_VENDOR ? { dataVendor: DATA_VENDOR } : {},
+              formValues: { products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }], },
               styles: CLICKWRAP_STYLES,
           },
           workflowTemplateId: WORKFLOW_TEMPLATE_ID
@@ -810,7 +810,7 @@ function displayClickwrap() {
             counterpartyName: EMAIL_ADDRESS,
             counterpartySignerName: EMAIL_ADDRESS,
             counterpartySignerEmail: EMAIL_ADDRESS,
-            dataVendor: DATA_VENDOR,
+            products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }],
           },
           styles: CLICKWRAP_STYLES,
       },
@@ -893,10 +893,10 @@ showToast("Success!");
             },
             body: JSON.stringify({
                 attributes: {
-                    dataVendor: DATA_VENDOR,
                     role699edbec23d5480b9012b2e42872ddc6: "Jason Test",
                     role32f73a669e5e42a3923d4d6c5d8bd12e: EMAIL_ADDRESS,
                     counterpartyName: "Jason Test",
+                    products: [{ quantity: 1, name: 'Product 1', price: { amount: 1000, currency: 'USD' } }],
                 },
                 user: "jason.brown@ironcladhq.com",
                 templateId: "693858cdc16bd0393afebab1",
